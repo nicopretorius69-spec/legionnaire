@@ -8,7 +8,6 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { ShoppingCart, Menu, X } from 'lucide-react'
 import Link from 'next/link'
-import { ProductCard } from '@/components/products/ProductCard'
 
 // Product type
 interface Product {
@@ -16,6 +15,7 @@ interface Product {
   name: string
   category: string
   shortDescription: string
+  features: string[]
   price: number | null
   colors: string[]
   delivery: string
@@ -28,7 +28,16 @@ const products: Product[] = [
     id: 'ftac-evolution',
     name: 'F-TAC™ Evolution',
     category: 'Premium',
-    shortDescription: 'The modern single solution rifle scabbard.',
+    shortDescription: 'The modern single solution rifle scabbard. Combines the best elements from F-TR, F-TAC, and F-TAC Evolve predecessors.',
+    features: [
+      '10mm thermal insulation & padding',
+      'Built-in crown protector',
+      '3 adjustable YKK clips with 25mm webbing',
+      'Detachable shoulder sling',
+      'Chest strap for hands-free carry',
+      '2 side pockets for essentials',
+      'Molly webbing & velcro patches',
+    ],
     price: 298.00,
     colors: ['Olive', 'Black'],
     delivery: '6-8 weeks',
@@ -38,7 +47,17 @@ const products: Product[] = [
     id: 'legionnaire-drag-bag',
     name: 'Legionnaire Drag Bag',
     category: 'Professional',
-    shortDescription: 'Premium drag bag setting the benchmark in the shooting industry.',
+    shortDescription: 'Premium drag bag setting the benchmark in the shooting industry. Designed and tested by shooters.',
+    features: [
+      'Polyester/acrylic woven blend',
+      'Fluorocarbon treated - fully waterproof',
+      'Weighs only 2.3kg when empty',
+      '145cm length - fits rifles up to 56 inches',
+      'Boxed stitched for maximum strength',
+      'YKK zippers with custom branded tabs',
+      '2 padded shoulder straps',
+      '2 outside pockets',
+    ],
     price: null,
     colors: ['Olive', 'Black'],
     delivery: '6-8 weeks',
@@ -48,7 +67,16 @@ const products: Product[] = [
     id: 'tuls-mat',
     name: 'TULS Mat',
     category: 'Lightweight',
-    shortDescription: 'Lightweight shooting solution. Deploys in under 10 seconds.',
+    shortDescription: 'Lightweight shooting solution. Deploys in under 10 seconds, stows in less than 30 seconds.',
+    features: [
+      'Lightweight design',
+      'Built-in FlexLoad load bar for bipod',
+      'Minimal padding for torso protection',
+      'Quick deploy/stow system',
+      'Fits in truck seat storage',
+      'Multi-purpose use',
+      'Designed for field use',
+    ],
     price: 268.00,
     colors: [],
     delivery: '6-8 weeks',
@@ -58,7 +86,16 @@ const products: Product[] = [
     id: 'legionnaire-mab',
     name: 'Legionnaire MAB (50 Round)',
     category: 'Modular',
-    shortDescription: 'One-of-a-kind modular ammo storage solution.',
+    shortDescription: 'One-of-a-kind modular ammo storage solution with removable ammo strips.',
+    features: [
+      'Removable ammo strips',
+      'Mil-Spec woven elastic construction',
+      'Stores .223 to .300 Win Mag',
+      'Capacity: 50 rounds',
+      'Thermal protection layers',
+      'No ammo contact - no rattles',
+      'Fits Ligionnaire Drag Bag',
+    ],
     price: null,
     colors: [],
     delivery: '6-8 weeks',
@@ -281,7 +318,7 @@ export default function Home() {
           className="object-cover absolute inset-0"
           priority
         />
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="mb-6">
             <p className="text-red-500 font-semibold text-sm tracking-widest">FRATRES IN ARMIS</p>
@@ -293,7 +330,7 @@ export default function Home() {
           </h1>
 
           <p className="text-2xl text-gray-200 mb-8 max-w-3xl mx-auto font-medium">
-            South African engineered tactical equipment for hunters and outdoor enthusiasts in New Zealand. Experience the new F-TAC™ Evolution revolutionary designed for performance in real-world conditions.
+            Purpose-built tactical equipment for hunters and outdoor enthusiasts, engineered to protect and transport your most prized equipment with confidence, wherever the journey takes you.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -332,13 +369,13 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-4">Legionnaire Exists for One Reason</h3>
                 <p className="text-gray-700 font-semibold mb-4">Gear must work when it matters.</p>
                 <p className="text-gray-700 mb-4">
-                  Our products are shaped by real-world hunting and outdoor experience in demanding environments, then refined and adapted for New Zealand conditions. Every design choice is practical, purposeful, and built to stand up to real use — not trends.
+                  Our products are shaped by real-world hunting and outdoor experience across demanding environments worldwide. Every design choice is practical, purposeful, and built to stand up to real use — not trends.
                 </p>
                 <p className="text-gray-700 mb-4">
-                  The F-TAC™ Evolution and supporting range are designed with durability, functionality, and long-term reliability in mind. From materials to construction, nothing is added for show. If it doesn't serve a purpose in the field, it doesn't belong.
+                  The F-TAC™ Evolution and supporting range are designed with durability, functionality, and long-term reliability in mind. The F-TAC™ system introduces a true front-carry solution, keeping your hands free while your weapon stays protected, accessible, and out of harm’s way. From materials to construction, nothing is added for show. If it doesn’t serve a purpose in the field, it doesn’t belong.
                 </p>
                 <p className="text-gray-700">
-                  Now available in New Zealand, Legionnaire supports hunters and outdoor enthusiasts who value quiet confidence, proven design, and equipment they can trust.
+                  Legionnaire supports hunters and outdoor enthusiasts who value freedom of movement, proven design, and equipment they can trust — wherever they hunt.
                 </p>
               </div>
             </div>
@@ -801,5 +838,136 @@ export default function Home() {
         </div>
       </footer>
     </div>
+  )
+}
+
+// Product Card Component
+function ProductCard({
+  product,
+  onAddToCart,
+}: {
+  product: Product
+  onAddToCart: (product: Product, quantity: number, color?: string) => void
+}) {
+  const [quantity, setQuantity] = useState(1)
+  const [selectedColor, setSelectedColor] = useState(product.colors[0] || '')
+
+  return (
+    <Card className="overflow-hidden hover:shadow-lg transition">
+      {/* Product Image */}
+      <div className="w-full h-64 bg-gray-100 flex items-center justify-center relative">
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          className="object-contain p-4"
+        />
+      </div>
+
+      <div className="p-6">
+        <div className="mb-4">
+          <span className="inline-block px-3 py-1 bg-red-100 text-red-600 text-xs font-semibold rounded-full mb-2">
+            {product.category}
+          </span>
+          <h3 className="text-2xl font-bold mb-2">{product.name}</h3>
+          <p className="text-gray-600 text-sm mb-4">{product.shortDescription}</p>
+          
+          {/* Features List */}
+          <ul className="mt-4 space-y-1">
+            {product.features?.map((feature, i) => (
+              <li key={i} className="text-xs text-gray-500 flex items-start gap-2">
+                <span className="text-red-500 mt-1">•</span>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Colors */}
+        {product.colors.length > 0 && (
+          <div className="mb-4">
+            <label className="block text-sm font-semibold mb-2">Color</label>
+            <div className="flex gap-2">
+              {product.colors.map((color) => (
+                <button
+                  key={color}
+                  onClick={() => setSelectedColor(color)}
+                  className={`px-4 py-2 border-2 rounded transition ${
+                    selectedColor === color
+                      ? 'border-red-600 bg-red-50'
+                      : 'border-gray-300 hover:border-gray-400'
+                  }`}
+                >
+                  {color}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Price */}
+        <div className="mb-4">
+          <p className="text-sm text-gray-600 mb-1">Price:</p>
+          {product.price ? (
+            <p className="text-3xl font-bold text-red-600">${product.price.toFixed(2)}</p>
+          ) : (
+            <p className="text-2xl font-bold text-orange-600">Price on Request</p>
+          )}
+        </div>
+
+        {/* Delivery */}
+        <div className="mb-6 p-3 bg-blue-50 rounded">
+          <p className="text-sm text-gray-700">
+            <strong>Delivery:</strong> {product.delivery}
+          </p>
+        </div>
+
+        {/* Quantity */}
+        <div className="mb-6">
+          <label className="block text-sm font-semibold mb-2">Quantity</label>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setQuantity(Math.max(1, quantity - 1))}
+              className="px-3 py-2 border border-gray-300 rounded hover:bg-gray-100"
+            >
+              −
+            </button>
+            <input
+              type="number"
+              min="1"
+              value={quantity}
+              onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
+              className="w-12 text-center border border-gray-300 rounded py-2"
+            />
+            <button
+              onClick={() => setQuantity(quantity + 1)}
+              className="px-3 py-2 border border-gray-300 rounded hover:bg-gray-100"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        {/* Action Button */}
+        {product.price ? (
+          <Button
+            onClick={() => {
+              onAddToCart(product, quantity, selectedColor || undefined)
+              setQuantity(1)
+            }}
+            className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3"
+          >
+            Add to Pre-Order
+          </Button>
+        ) : (
+          <Button
+            variant="outline"
+            className="w-full border-gray-400 text-gray-700 font-bold py-3"
+          >
+            Contact for Pricing
+          </Button>
+        )}
+      </div>
+    </Card>
   )
 }
