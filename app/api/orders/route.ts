@@ -1,6 +1,32 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
+interface OrderItem {
+  product: {
+    name: string
+    price: number
+  }
+  quantity: number
+}
+
+interface CheckoutForm {
+  firstName: string
+  lastName: string
+  email: string
+  phone: string
+  streetAddress: string
+  suburb?: string
+  city: string
+  postcode: string
+  notes?: string
+}
+
+interface OrderData {
+  items: OrderItem[]
+  checkoutForm: CheckoutForm
+  total: number
+}
+
 // Configure email transporter with Google Workspace
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
@@ -14,10 +40,10 @@ const transporter = nodemailer.createTransport({
 
 export async function POST(request: NextRequest) {
   try {
-    const orderData = await request.json()
+    const orderData = (await request.json()) as OrderData
 
     const itemsList = orderData.items
-      .map((item: any) => `- ${item.product.name} × ${item.quantity}: $${(item.product.price * item.quantity).toFixed(2)}`)
+      .map((item) => `- ${item.product.name} × ${item.quantity}: $${(item.product.price * item.quantity).toFixed(2)}`)
       .join('\n')
 
     const customerName = `${orderData.checkoutForm.firstName} ${orderData.checkoutForm.lastName}`

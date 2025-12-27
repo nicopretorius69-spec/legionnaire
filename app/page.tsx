@@ -253,11 +253,7 @@ export default function Home() {
             {/* Logo on the Left */}
             <div className="flex-shrink-0">
               <Link href="/" className="block">
-                <img 
-                  src="/images/legionnaire-logo.png" 
-                  alt="Legionnaire" 
-                  className="h-16 w-auto object-contain" 
-                />
+                <Image src="/images/legionnaire-logo.png" alt="Legionnaire" width={150} height={64} className="h-16 w-auto object-contain" />
               </Link>
             </div>
 
@@ -372,7 +368,7 @@ export default function Home() {
                   Our products are shaped by real-world hunting and outdoor experience across demanding environments worldwide. Every design choice is practical, purposeful, and built to stand up to real use — not trends.
                 </p>
                 <p className="text-gray-700 mb-4">
-                  The F-TAC™ Evolution and supporting range are designed with durability, functionality, and long-term reliability in mind. The F-TAC™ system introduces a true front-carry solution, keeping your hands free while your weapon stays protected, accessible, and out of harm’s way. From materials to construction, nothing is added for show. If it doesn’t serve a purpose in the field, it doesn’t belong.
+                  The F-TAC™ Evolution and supporting range are designed with durability, functionality, and long-term reliability in mind. The F-TAC™ system introduces a true front-carry solution, keeping your hands free while your weapon stays protected, accessible, and out of harm&rsquo;s way. From materials to construction, nothing is added for show. If it doesn&rsquo;t serve a purpose in the field, it doesn’t belong.
                 </p>
                 <p className="text-gray-700">
                   Legionnaire supports hunters and outdoor enthusiasts who value freedom of movement, proven design, and equipment they can trust — wherever they hunt.
@@ -509,7 +505,7 @@ export default function Home() {
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
-                  <p className="text-gray-600">Thank you for contacting us. We'll get back to you as soon as possible.</p>
+                  <p className="text-gray-600">Thank you for contacting us. We&apos;ll get back to you as soon as possible.</p>
                 </div>
               ) : (
                 <form onSubmit={handleContactSubmit} className="space-y-4">
@@ -663,7 +659,7 @@ export default function Home() {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Order Submitted!</h3>
                   <p className="text-gray-600 mb-4">
-                    Thank you for your pre-order. We've received your order and will contact you shortly.
+                    Thank you for your pre-order. We&apos;ve received your order and will contact you shortly.
                   </p>
                   <p className="text-sm text-gray-500">
                     Confirmation email sent to {checkoutForm.email}
@@ -770,7 +766,7 @@ export default function Home() {
                     </div>
                     <Card className="mt-4 p-3 bg-blue-50 border-l-4 border-l-blue-600">
                       <p className="text-sm text-gray-700">
-                        <strong>Delivery:</strong> Standard delivery: 6-8 weeks. We'll contact you to arrange payment and confirm delivery details.
+                        <strong>Delivery:</strong> Standard delivery: 6-8 weeks. We&apos;ll contact you to arrange payment and confirm delivery details.
                       </p>
                     </Card>
                   </Card>
