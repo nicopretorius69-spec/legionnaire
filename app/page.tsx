@@ -10,6 +10,7 @@ import { ShoppingCart, Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import { ProductCard } from '@/components/products/ProductCard'
 
+// Product type
 interface Product {
   id: string
   name: string
@@ -22,6 +23,7 @@ interface Product {
   image: string
 }
 
+// Products data
 const products: Product[] = [
   {
     id: 'ftac-evolution',
@@ -106,6 +108,7 @@ const products: Product[] = [
   },
 ]
 
+// Cart item type
 interface CartItem {
   product: Product
   quantity: number
@@ -155,22 +158,22 @@ export default function Home() {
 
   return (
     <div className="bg-white min-h-screen overflow-y-auto" suppressHydrationWarning>
-      {/* About section text fix */}
+      {/* ABOUT TEXT FIX */}
       <p>
         keeping your hands free while your weapon stays protected, accessible,
         and out of harm&apos;s way.
       </p>
 
-      {/* Contact success fix */}
+      {/* CONTACT SUCCESS FIX */}
       <p>
         Thank you for contacting us. We&apos;ll get back to you as soon as
         possible.
       </p>
 
-      {/* Checkout success fix */}
+      {/* CHECKOUT SUCCESS FIX */}
       <p>
-        Thank you for your pre-order. We&apos;ve received your order and will
-        contact you shortly.
+        Thank you for your pre-order. We&apos;ve received your order and
+        will contact you shortly.
       </p>
     </div>
   )
