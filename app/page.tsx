@@ -245,32 +245,34 @@ export default function Home() {
   if (!mounted) return <div className="bg-white min-h-screen" />
 
   return (
-    <div className="bg-white min-h-screen overflow-y-auto" suppressHydrationWarning>
+    <div className="bg-white min-h-screen" suppressHydrationWarning>
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white border-b border-gray-200 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-32">
+          <div className="flex justify-between items-center h-24">
             
             {/* Logo on the Left */}
             <div className="flex-shrink-0">
               <Link href="/" className="block">
-                <img 
+                <Image 
                   src="/images/legionnaire-logo.png" 
                   alt="Legionnaire" 
-                  className="h-32 w-auto object-contain" 
+                  width={150}
+                  height={64}
+                  className="h-24 w-auto object-contain" 
                 />
               </Link>
             </div>
 
             {/* Links in the Middle */}
             <div className="hidden md:flex gap-10 items-center">
-              <a href="#about" className="text-gray-900 hover:text-red-600 transition font-bold uppercase tracking-widest text-xs">
+              <a href="#about" className="text-gray-900 hover:text-red-600 transition font-bold uppercase tracking-widest text-sm">
                 About
               </a>
-              <a href="#products" className="text-gray-900 hover:text-red-600 transition font-bold uppercase tracking-widest text-xs">
+              <a href="#products" className="text-gray-900 hover:text-red-600 transition font-bold uppercase tracking-widest text-sm">
                 Products
               </a>
-              <a href="#contact" className="text-gray-900 hover:text-red-600 transition font-bold uppercase tracking-widest text-xs">
+              <a href="#contact" className="text-gray-900 hover:text-red-600 transition font-bold uppercase tracking-widest text-sm">
                 Contact
               </a>
             </div>
@@ -290,7 +292,7 @@ export default function Home() {
               </button>
               
               <Button 
-                className="hidden sm:block bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-widest text-xs px-6"
+                className="hidden sm:block bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-widest text-sm px-6"
                 onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Get Started
@@ -314,12 +316,12 @@ export default function Home() {
       <section className="pt-32 pb-0 px-0 bg-gray-900 text-white relative min-h-[85vh] flex items-center">
         <Image
           src="/images/lifestyle/hunter-glassing-mountains.png"
-          alt="Hunter with F-TAC™ Evolution in mountains"
+          alt="Hunter with F-TAC&trade; Evolution in mountains"
           fill
           className="object-cover absolute inset-0"
           priority
         />
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/65"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="mb-6">
             <p className="text-red-500 font-semibold text-sm tracking-widest">FRATRES IN ARMIS</p>
@@ -330,7 +332,7 @@ export default function Home() {
             Premium Tactical Gear
           </h1>
 
-          <p className="text-2xl text-gray-200 mb-8 max-w-3xl mx-auto font-medium">
+          <p className="text-3xl text-gray-100 mb-10 max-w-4xl mx-auto font-semibold leading-relaxed">
             Purpose-built tactical equipment for hunters and outdoor enthusiasts, engineered to protect and transport your most prized equipment with confidence, wherever the journey takes you.
           </p>
 
@@ -370,13 +372,13 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-4">Legionnaire Exists for One Reason</h3>
                 <p className="text-gray-700 font-semibold mb-4">Gear must work when it matters.</p>
                 <p className="text-gray-700 mb-4">
-                  Our products are shaped by real-world hunting and outdoor experience across demanding environments worldwide. Every design choice is practical, purposeful, and built to stand up to real use — not trends.
+                  Our products are shaped by real-world hunting and outdoor experience across demanding environments worldwide. Every design choice is practical, purposeful, and built to stand up to real use &mdash; not trends.
                 </p>
                 <p className="text-gray-700 mb-4">
-                  The F-TAC™ Evolution and supporting range are designed with durability, functionality, and long-term reliability in mind. The F-TAC™ system introduces a true front-carry solution, keeping your hands free while your weapon stays protected, accessible, and out of harm&apos;s way. From materials to construction, nothing is added for show. If it doesn&apos;t serve a purpose in the field, it doesn&apos;t belong.
+                  The F-TAC&trade; Evolution and supporting range are designed with durability, functionality, and long-term reliability in mind. The F-TAC&trade; system introduces a true front-carry solution, keeping your hands free while your weapon stays protected, accessible, and out of harm&rsquo;s way. From materials to construction, nothing is added for show. If it doesn&rsquo;t serve a purpose in the field, it doesn&rsquo;t belong.
                 </p>
                 <p className="text-gray-700">
-                  Legionnaire supports hunters and outdoor enthusiasts who value freedom of movement, proven design, and equipment they can trust — wherever they hunt.
+                  Legionnaire supports hunters and outdoor enthusiasts who value freedom of movement, proven design, and equipment they can trust &mdash; wherever they hunt.
                 </p>
               </div>
             </div>
@@ -415,7 +417,7 @@ export default function Home() {
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden group">
                 <Image
                   src="/images/lifestyle/battle-tested.png"
-                  alt="Battle-Tested - F-TAC™ Evolution in field"
+                  alt="Battle-Tested - F-TAC&trade; Evolution in field"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -430,7 +432,7 @@ export default function Home() {
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden group">
                 <Image
                   src="/images/lifestyle/purpose-built.png"
-                  alt="Purpose-Built - F-TAC™ Evolution with binoculars"
+                  alt="Purpose-Built - F-TAC&trade; Evolution with binoculars"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -445,7 +447,7 @@ export default function Home() {
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden group">
                 <Image
                   src="/images/lifestyle/performance.png"
-                  alt="Performance - F-TAC™ Evolution in mountainous terrain"
+                  alt="Performance - F-TAC&trade; Evolution in mountainous terrain"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -805,7 +807,7 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-2 uppercase tracking-widest text-[10px] text-gray-300">Products</h4>
               <ul className="space-y-1 text-xs text-gray-500">
-                <li><a href="#products" className="hover:text-white transition">F-TAC™ Evolution</a></li>
+                <li><a href="#products" className="hover:text-white transition">F-TAC&trade; Evolution</a></li>
                 <li><a href="#products" className="hover:text-white transition">Legionnaire Drag Bag</a></li>
                 <li><a href="#products" className="hover:text-white transition">TULS Mat</a></li>
                 <li><a href="#products" className="hover:text-white transition">Legionnaire MAB</a></li>

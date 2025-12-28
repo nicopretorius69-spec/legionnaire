@@ -1,16 +1,48 @@
 $ next dev --turbopack --port "3000"
-   ▲ Next.js 15.5.6 (Turbopack)
+   ▲ Next.js 15.5.7 (Turbopack)
    - Local:        http://localhost:3000
    - Network:      http://169.254.0.21:3000
    - Environments: .env.local
 
  ✓ Starting...
- ✓ Ready in 1586ms
+ ✓ Ready in 1526ms
  ○ Compiling / ...
- ✓ Compiled / in 5.6s
+ ✓ Compiled / in 5.4s
  ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
- GET / 200 in 6469ms
- ○ Compiling /favicon.ico ...
- ✓ Compiled /favicon.ico in 739ms
- GET /favicon.ico 200 in 1091ms
- GET / 200 in 172ms
+ GET / 200 in 6071ms
+ ⚠ Cross origin request detected from legionnaire.lindy.site to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ ✓ Compiled /favicon.ico in 487ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 529ms
+ GET /favicon.ico 200 in 852ms
+ ○ Compiling /privacy ...
+ ✓ Compiled /privacy in 614ms
+ GET /privacy 200 in 752ms
+ GET / 200 in 114ms
+ GET / 200 in 144ms
+ ✓ Compiled /terms in 483ms
+ GET /terms 200 in 595ms
+ GET / 200 in 153ms
+ ✓ Compiled in 313ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 572ms
+ GET / 200 in 168ms
+ GET / 200 in 163ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 286ms
+ GET /favicon.ico 200 in 288ms
+ GET / 200 in 199ms
+ GET /favicon.ico 200 in 268ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 266ms
+ GET /privacy 200 in 136ms
+ GET / 200 in 112ms
+ GET /terms 200 in 111ms
+ GET / 200 in 156ms
+ GET / 200 in 401ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 283ms
+ GET / 200 in 143ms
+ ○ Compiling /_not-found/page ...
+ ✓ Compiled /_not-found/page in 590ms
+ GET /robots.txt 404 in 850ms
+ GET /robots.txt 404 in 168ms
+ GET / 200 in 180ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 273ms

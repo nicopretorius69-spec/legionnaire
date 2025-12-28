@@ -10,6 +10,7 @@ interface Product {
   name: string
   category: string
   shortDescription: string
+  features: string[]
   price: number | null
   colors: string[]
   delivery: string
@@ -45,6 +46,14 @@ export function ProductCard({
           </span>
           <h3 className="text-2xl font-bold mb-2">{product.name}</h3>
           <p className="text-gray-600 text-sm mb-4">{product.shortDescription}</p>
+          <ul className="mt-4 space-y-1">
+            {product.features?.map((feature, i) => (
+              <li key={i} className="text-xs text-gray-500 flex items-start gap-2">
+                <span className="text-red-500 mt-1">•</span>
+                {feature}
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Colors */}
