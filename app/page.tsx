@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { ShoppingCart, Menu, X } from 'lucide-react'
 import Link from 'next/link'
+import { ProductCard } from '@/components/products/ProductCard'
 
 // Product type
 interface Product {
@@ -248,12 +249,16 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white border-b border-gray-200 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-24">
+          <div className="flex justify-between items-center h-32">
             
             {/* Logo on the Left */}
             <div className="flex-shrink-0">
               <Link href="/" className="block">
-                <Image src="/images/legionnaire-logo.png" alt="Legionnaire" width={150} height={64} className="h-16 w-auto object-contain" />
+                <img 
+                  src="/images/legionnaire-logo.png" 
+                  alt="Legionnaire" 
+                  className="h-32 w-auto object-contain" 
+                />
               </Link>
             </div>
 
@@ -314,7 +319,7 @@ export default function Home() {
           className="object-cover absolute inset-0"
           priority
         />
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/70"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="mb-6">
             <p className="text-red-500 font-semibold text-sm tracking-widest">FRATRES IN ARMIS</p>
@@ -368,7 +373,7 @@ export default function Home() {
                   Our products are shaped by real-world hunting and outdoor experience across demanding environments worldwide. Every design choice is practical, purposeful, and built to stand up to real use — not trends.
                 </p>
                 <p className="text-gray-700 mb-4">
-                  The F-TAC™ Evolution and supporting range are designed with durability, functionality, and long-term reliability in mind. The F-TAC™ system introduces a true front-carry solution, keeping your hands free while your weapon stays protected, accessible, and out of harm&rsquo;s way. From materials to construction, nothing is added for show. If it doesn&rsquo;t serve a purpose in the field, it doesn’t belong.
+                  The F-TAC™ Evolution and supporting range are designed with durability, functionality, and long-term reliability in mind. The F-TAC™ system introduces a true front-carry solution, keeping your hands free while your weapon stays protected, accessible, and out of harm’s way. From materials to construction, nothing is added for show. If it doesn’t serve a purpose in the field, it doesn’t belong.
                 </p>
                 <p className="text-gray-700">
                   Legionnaire supports hunters and outdoor enthusiasts who value freedom of movement, proven design, and equipment they can trust — wherever they hunt.
@@ -505,7 +510,7 @@ export default function Home() {
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
-                  <p className="text-gray-600">Thank you for contacting us. We&apos;ll get back to you as soon as possible.</p>
+                  <p className="text-gray-600">Thank you for contacting us. We'll get back to you as soon as possible.</p>
                 </div>
               ) : (
                 <form onSubmit={handleContactSubmit} className="space-y-4">
@@ -659,7 +664,7 @@ export default function Home() {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Order Submitted!</h3>
                   <p className="text-gray-600 mb-4">
-                    Thank you for your pre-order. We&apos;ve received your order and will contact you shortly.
+                    Thank you for your pre-order. We've received your order and will contact you shortly.
                   </p>
                   <p className="text-sm text-gray-500">
                     Confirmation email sent to {checkoutForm.email}
@@ -766,7 +771,7 @@ export default function Home() {
                     </div>
                     <Card className="mt-4 p-3 bg-blue-50 border-l-4 border-l-blue-600">
                       <p className="text-sm text-gray-700">
-                        <strong>Delivery:</strong> Standard delivery: 6-8 weeks. We&apos;ll contact you to arrange payment and confirm delivery details.
+                        <strong>Delivery:</strong> Standard delivery: 6-8 weeks. We'll contact you to arrange payment and confirm delivery details.
                       </p>
                     </Card>
                   </Card>
@@ -826,144 +831,13 @@ export default function Home() {
           <div className="border-t border-gray-800/50 py-4 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-600 uppercase tracking-widest">
             <p>© 2025 Legionnaire. All rights reserved.</p>
             <div className="flex gap-6 mt-2 md:mt-0">
-              <a href="#" className="hover:text-white transition">Privacy</a>
-              <a href="#" className="hover:text-white transition">Terms</a>
+              <Link href="/privacy" className="hover:text-white transition">Privacy</Link>
+              <Link href="/terms" className="hover:text-white transition">Terms</Link>
               <a href="https://www.legionnaire.co.nz" className="hover:text-white transition">legionnaire.co.nz</a>
             </div>
           </div>
         </div>
       </footer>
     </div>
-  )
-}
-
-// Product Card Component
-function ProductCard({
-  product,
-  onAddToCart,
-}: {
-  product: Product
-  onAddToCart: (product: Product, quantity: number, color?: string) => void
-}) {
-  const [quantity, setQuantity] = useState(1)
-  const [selectedColor, setSelectedColor] = useState(product.colors[0] || '')
-
-  return (
-    <Card className="overflow-hidden hover:shadow-lg transition">
-      {/* Product Image */}
-      <div className="w-full h-64 bg-gray-100 flex items-center justify-center relative">
-        <Image
-          src={product.image}
-          alt={product.name}
-          fill
-          className="object-contain p-4"
-        />
-      </div>
-
-      <div className="p-6">
-        <div className="mb-4">
-          <span className="inline-block px-3 py-1 bg-red-100 text-red-600 text-xs font-semibold rounded-full mb-2">
-            {product.category}
-          </span>
-          <h3 className="text-2xl font-bold mb-2">{product.name}</h3>
-          <p className="text-gray-600 text-sm mb-4">{product.shortDescription}</p>
-          
-          {/* Features List */}
-          <ul className="mt-4 space-y-1">
-            {product.features?.map((feature, i) => (
-              <li key={i} className="text-xs text-gray-500 flex items-start gap-2">
-                <span className="text-red-500 mt-1">•</span>
-                {feature}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Colors */}
-        {product.colors.length > 0 && (
-          <div className="mb-4">
-            <label className="block text-sm font-semibold mb-2">Color</label>
-            <div className="flex gap-2">
-              {product.colors.map((color) => (
-                <button
-                  key={color}
-                  onClick={() => setSelectedColor(color)}
-                  className={`px-4 py-2 border-2 rounded transition ${
-                    selectedColor === color
-                      ? 'border-red-600 bg-red-50'
-                      : 'border-gray-300 hover:border-gray-400'
-                  }`}
-                >
-                  {color}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Price */}
-        <div className="mb-4">
-          <p className="text-sm text-gray-600 mb-1">Price:</p>
-          {product.price ? (
-            <p className="text-3xl font-bold text-red-600">${product.price.toFixed(2)}</p>
-          ) : (
-            <p className="text-2xl font-bold text-orange-600">Price on Request</p>
-          )}
-        </div>
-
-        {/* Delivery */}
-        <div className="mb-6 p-3 bg-blue-50 rounded">
-          <p className="text-sm text-gray-700">
-            <strong>Delivery:</strong> {product.delivery}
-          </p>
-        </div>
-
-        {/* Quantity */}
-        <div className="mb-6">
-          <label className="block text-sm font-semibold mb-2">Quantity</label>
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => setQuantity(Math.max(1, quantity - 1))}
-              className="px-3 py-2 border border-gray-300 rounded hover:bg-gray-100"
-            >
-              −
-            </button>
-            <input
-              type="number"
-              min="1"
-              value={quantity}
-              onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
-              className="w-12 text-center border border-gray-300 rounded py-2"
-            />
-            <button
-              onClick={() => setQuantity(quantity + 1)}
-              className="px-3 py-2 border border-gray-300 rounded hover:bg-gray-100"
-            >
-              +
-            </button>
-          </div>
-        </div>
-
-        {/* Action Button */}
-        {product.price ? (
-          <Button
-            onClick={() => {
-              onAddToCart(product, quantity, selectedColor || undefined)
-              setQuantity(1)
-            }}
-            className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3"
-          >
-            Add to Pre-Order
-          </Button>
-        ) : (
-          <Button
-            variant="outline"
-            className="w-full border-gray-400 text-gray-700 font-bold py-3"
-          >
-            Contact for Pricing
-          </Button>
-        )}
-      </div>
-    </Card>
   )
 }
