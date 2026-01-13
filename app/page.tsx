@@ -487,7 +487,6 @@ export default function Home() {
                 <div>
                   <h3 className="font-bold text-lg mb-2">📍 Address</h3>
                   <p className="text-gray-700">
-                    39 Clansman Terrace<br />
                     Gulf Harbour<br />
                     0930, New Zealand
                   </p>
