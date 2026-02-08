@@ -347,7 +347,7 @@ export default function Home() {
             {/* Right side - Image */}
             <div className="relative aspect-video rounded-lg overflow-hidden self-center shadow-lg">
               <Image
-                src="/images/lifestyle/ftac-and-mat.png"
+                src="/images/about-section.jpg"
                 alt="Legionnaire Gear in the Field"
                 fill
                 className="object-cover brightness-[1.1]"
