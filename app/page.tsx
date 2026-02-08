@@ -45,26 +45,6 @@ const products: Product[] = [
     image: '/images/products/ftac-evolution.png',
   },
   {
-    id: 'legionnaire-drag-bag',
-    name: 'Legionnaire Drag Bag',
-    category: 'Professional',
-    shortDescription: 'Premium drag bag setting the benchmark in the shooting industry. Designed and tested by shooters.',
-    features: [
-      'Polyester/acrylic woven blend',
-      'Fluorocarbon treated - fully waterproof',
-      'Weighs only 2.3kg when empty',
-      '145cm length - fits rifles up to 56 inches',
-      'Boxed stitched for maximum strength',
-      'YKK zippers with custom branded tabs',
-      '2 padded shoulder straps',
-      '2 outside pockets',
-    ],
-    price: null,
-    colors: ['Olive', 'Black'],
-    delivery: '6-8 weeks',
-    image: '/images/products/drag-bag.png',
-  },
-  {
     id: 'tuls-mat',
     name: 'TULS Mat',
     category: 'Lightweight',
@@ -82,25 +62,6 @@ const products: Product[] = [
     colors: [],
     delivery: '6-8 weeks',
     image: '/images/products/tuls-mat.png',
-  },
-  {
-    id: 'legionnaire-mab',
-    name: 'Legionnaire MAB (50 Round)',
-    category: 'Modular',
-    shortDescription: 'One-of-a-kind modular ammo storage solution with removable ammo strips.',
-    features: [
-      'Removable ammo strips',
-      'Mil-Spec woven elastic construction',
-      'Stores .223 to .300 Win Mag',
-      'Capacity: 50 rounds',
-      'Thermal protection layers',
-      'No ammo contact - no rattles',
-      'Fits Ligionnaire Drag Bag',
-    ],
-    price: null,
-    colors: [],
-    delivery: '6-8 weeks',
-    image: '/images/products/mab-50.png',
   },
 ]
 
@@ -807,9 +768,7 @@ export default function Home() {
               <h4 className="font-bold mb-2 uppercase tracking-widest text-[10px] text-gray-300">Products</h4>
               <ul className="space-y-1 text-xs text-gray-500">
                 <li><a href="#products" className="hover:text-white transition">F-TAC&trade; Evolution</a></li>
-                <li><a href="#products" className="hover:text-white transition">Legionnaire Drag Bag</a></li>
                 <li><a href="#products" className="hover:text-white transition">TULS Mat</a></li>
-                <li><a href="#products" className="hover:text-white transition">Legionnaire MAB</a></li>
               </ul>
             </div>
 
