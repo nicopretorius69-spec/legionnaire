@@ -425,6 +425,69 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
+
+      {/* Videos Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold mb-2 text-center">Check out our videos on YouTube</h2>
+          <p className="text-center text-gray-600 mb-12">See the F-TAC™ Evolution and our tactical gear in action</p>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Jaco Demo Video */}
+            <div className="flex flex-col">
+              <div className="aspect-video bg-black rounded-lg overflow-hidden mb-4">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/6AwkBubWHfg"
+                  title="F-TAC Evolution Real-World Demo with Jaco"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Real-World Demo with Jaco</h3>
+              <p className="text-gray-600 mb-4">See the F-TAC™ Evolution in action with real-world demonstration of durability and functionality.</p>
+              <a
+                href="https://www.youtube.com/shorts/6AwkBubWHfg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-600 hover:text-red-700 font-semibold"
+              >
+                Watch on YouTube →
+              </a>
+            </div>
+
+            {/* AI Generated Video */}
+            <div className="flex flex-col">
+              <div className="aspect-video bg-black rounded-lg overflow-hidden mb-4">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/UIpsJ97OHc0"
+                  title="AI Generated Tactical Gear Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Tactical Gear Showcase</h3>
+              <p className="text-gray-600 mb-4">Professional showcase of our premium tactical equipment designed for hunters and outdoor enthusiasts.</p>
+              <a
+                href="https://www.youtube.com/shorts/UIpsJ97OHc0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-600 hover:text-red-700 font-semibold"
+              >
+                Watch on YouTube →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center">Get in Touch</h2>
