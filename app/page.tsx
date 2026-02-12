@@ -27,7 +27,7 @@ interface Product {
 const products: Product[] = [
   {
     id: 'ftac-evolution',
-    name: 'F-TAC™ Evolution',
+    name: 'F-TAC Evolution',
     category: 'Premium',
     shortDescription: 'The modern single solution rifle scabbard. Combines the best elements from F-TR, F-TAC, and F-TAC Evolve predecessors.',
     features: [
@@ -277,7 +277,7 @@ export default function Home() {
       <section className="pt-32 pb-0 px-0 bg-gray-900 text-white relative min-h-[85vh] flex items-center">
         <Image
           src="/images/lifestyle/hunter-glassing-mountains.png"
-          alt="Hunter with F-TAC&trade; Evolution in mountains"
+          alt="Hunter with F-TAC Evolution in mountains"
           fill
           className="object-cover absolute inset-0"
           priority
@@ -336,7 +336,7 @@ export default function Home() {
                   Our products are shaped by real-world hunting and outdoor experience across demanding environments worldwide. Every design choice is practical, purposeful, and built to stand up to real use &mdash; not trends.
                 </p>
                 <p className="text-gray-700 mb-4">
-                  The F-TAC&trade; Evolution and supporting range are designed with durability, functionality, and long-term reliability in mind. The F-TAC&trade; system introduces a true front-carry solution, keeping your hands free while your weapon stays protected, accessible, and out of harm&rsquo;s way. From materials to construction, nothing is added for show. If it doesn&rsquo;t serve a purpose in the field, it doesn&rsquo;t belong.
+                  The F-TAC Evolution and supporting range are designed with durability, functionality, and long-term reliability in mind. The F-TAC system introduces a true front-carry solution, keeping your hands free while your weapon stays protected, accessible, and out of harm&rsquo;s way. From materials to construction, nothing is added for show. If it doesn&rsquo;t serve a purpose in the field, it doesn&rsquo;t belong.
                 </p>
                 <p className="text-gray-700">
                   Legionnaire supports hunters and outdoor enthusiasts who value freedom of movement, proven design, and equipment they can trust &mdash; wherever they hunt.
@@ -378,7 +378,7 @@ export default function Home() {
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden group">
                 <Image
                   src="/images/lifestyle/battle-tested.png"
-                  alt="Battle-Tested - F-TAC&trade; Evolution in field"
+                  alt="Battle-Tested - F-TAC Evolution in field"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -393,7 +393,7 @@ export default function Home() {
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden group">
                 <Image
                   src="/images/lifestyle/purpose-built.png"
-                  alt="Purpose-Built - F-TAC&trade; Evolution with binoculars"
+                  alt="Purpose-Built - F-TAC Evolution with binoculars"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -408,7 +408,7 @@ export default function Home() {
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden group">
                 <Image
                   src="/images/lifestyle/performance.png"
-                  alt="Performance - F-TAC&trade; Evolution in mountainous terrain"
+                  alt="Performance - F-TAC Evolution in mountainous terrain"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -430,7 +430,7 @@ export default function Home() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-2 text-center">Check out our videos on YouTube</h2>
-          <p className="text-center text-gray-600 mb-12">See the F-TAC™ Evolution and our tactical gear in action</p>
+          <p className="text-center text-gray-600 mb-12">See the F-TAC Evolution and our tactical gear in action</p>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Jaco Demo Video */}
@@ -448,7 +448,7 @@ export default function Home() {
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2">Real-World Demo with Jaco</h3>
-              <p className="text-gray-600 mb-4">See the F-TAC™ Evolution in action with real-world demonstration of durability and functionality.</p>
+              <p className="text-gray-600 mb-4">See the F-TAC Evolution in action with real-world demonstration of durability and functionality.</p>
               <a
                 href="https://www.youtube.com/shorts/6AwkBubWHfg"
                 target="_blank"
@@ -830,7 +830,7 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-2 uppercase tracking-widest text-[10px] text-gray-300">Products</h4>
               <ul className="space-y-1 text-xs text-gray-500">
-                <li><a href="#products" className="hover:text-white transition">F-TAC&trade; Evolution</a></li>
+                <li><a href="#products" className="hover:text-white transition">F-TAC Evolution</a></li>
                 <li><a href="#products" className="hover:text-white transition">TULS Mat</a></li>
               </ul>
             </div>
