@@ -424,8 +424,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
-
       {/* Videos Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -433,7 +431,7 @@ export default function Home() {
           <p className="text-center text-gray-600 mb-12">See the F-TAC Evolution and our tactical gear in action</p>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Tactical Gear Showcase Video */}
+            {/* Video 1 - Look Mum, No Hands */}
             <div className="flex flex-col">
               <div className="aspect-video bg-black rounded-lg overflow-hidden mb-4">
                 <iframe
@@ -450,7 +448,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-2">Tactical Gear Showcase</h3>
               <p className="text-gray-600 mb-4">Professional showcase of our premium tactical equipment designed for hunters and outdoor enthusiasts.</p>
               <a
-                href="https://www.youtube.com/shorts/6AwkBubWHfg"
+                href="https://www.youtube.com/watch?v=6AwkBubWHfg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-red-600 hover:text-red-700 font-semibold"
@@ -459,7 +457,7 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Real-World Demo with Jaco Video */}
+            {/* Video 2 - F-TAC Evolution in Action */}
             <div className="flex flex-col">
               <div className="aspect-video bg-black rounded-lg overflow-hidden mb-4">
                 <iframe
@@ -476,7 +474,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-2">Real-World Demo with Jaco</h3>
               <p className="text-gray-600 mb-4">See the F-TAC Evolution in action with real-world demonstration of durability and functionality.</p>
               <a
-                href="https://www.youtube.com/shorts/UIpsJ97OHc0"
+                href="https://www.youtube.com/watch?v=UIpsJ97OHc0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-red-600 hover:text-red-700 font-semibold"
@@ -487,6 +485,15 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+            {/* Contact Section */}
+
+      {/* Videos Section */}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+
 
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
