@@ -433,22 +433,22 @@ export default function Home() {
           <p className="text-center text-gray-600 mb-12">See the F-TAC Evolution and our tactical gear in action</p>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Jaco Demo Video */}
+            {/* Tactical Gear Showcase Video */}
             <div className="flex flex-col">
               <div className="aspect-video bg-black rounded-lg overflow-hidden mb-4">
                 <iframe
                   width="100%"
                   height="100%"
                   src="https://www.youtube.com/embed/6AwkBubWHfg"
-                  title="F-TAC Evolution Real-World Demo with Jaco"
+                  title="Tactical Gear Showcase"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="w-full h-full"
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Real-World Demo with Jaco</h3>
-              <p className="text-gray-600 mb-4">See the F-TAC Evolution in action with real-world demonstration of durability and functionality.</p>
+              <h3 className="text-xl font-semibold mb-2">Tactical Gear Showcase</h3>
+              <p className="text-gray-600 mb-4">Professional showcase of our premium tactical equipment designed for hunters and outdoor enthusiasts.</p>
               <a
                 href="https://www.youtube.com/shorts/6AwkBubWHfg"
                 target="_blank"
@@ -459,22 +459,22 @@ export default function Home() {
               </a>
             </div>
 
-            {/* AI Generated Video */}
+            {/* Real-World Demo with Jaco Video */}
             <div className="flex flex-col">
               <div className="aspect-video bg-black rounded-lg overflow-hidden mb-4">
                 <iframe
                   width="100%"
                   height="100%"
                   src="https://www.youtube.com/embed/UIpsJ97OHc0"
-                  title="AI Generated Tactical Gear Video"
+                  title="Real-World Demo with Jaco"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="w-full h-full"
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Tactical Gear Showcase</h3>
-              <p className="text-gray-600 mb-4">Professional showcase of our premium tactical equipment designed for hunters and outdoor enthusiasts.</p>
+              <h3 className="text-xl font-semibold mb-2">Real-World Demo with Jaco</h3>
+              <p className="text-gray-600 mb-4">See the F-TAC Evolution in action with real-world demonstration of durability and functionality.</p>
               <a
                 href="https://www.youtube.com/shorts/UIpsJ97OHc0"
                 target="_blank"
