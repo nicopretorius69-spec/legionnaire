@@ -336,7 +336,7 @@ export default function Home() {
                   Our products are shaped by real-world hunting and outdoor experience across demanding environments worldwide. Every design choice is practical, purposeful, and built to stand up to real use — not trends.
                 </p>
                 <p className="text-gray-700 mb-4">
-                  The F-TAC Evolution and supporting range are designed with durability, functionality, and long-term reliability in mind. The F-TAC system introduces a true front-carry solution, keeping your hands free while your weapon stays protected, accessible, and out of harm's way. From materials to construction, nothing is added for show. If it doesn't serve a purpose in the field, it doesn't belong.
+                  The F-TAC Evolution and supporting range are designed with durability, functionality, and long-term reliability in mind. The F-TAC system introduces a true front-carry solution, keeping your hands free while your weapon stays protected, accessible, and out of harm's way. From materials to construction, nothing is added for show. If it doesn&apos;t serve a purpose in the field, it doesn&apos;t belong.
                 </p>
                 <p className="text-gray-700">
                   Legionnaire supports hunters and outdoor enthusiasts who value freedom of movement, proven design, and equipment they can trust — wherever they hunt.
