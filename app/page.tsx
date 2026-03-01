@@ -358,13 +358,75 @@ export default function Home() {
       </section>
 
       {/* Products Section */}
+      <section id="products" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold mb-4 text-center">Our Products</h2>
+          <p className="text-center text-gray-600 mb-12">Built for real-world use. Designed to perform where it matters.</p>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-20">
+            {products.map((product) => (
+              <ProductCard key={product.id} product={product} onAddToCart={addToCart} />
+            ))}
+          </div>
+
+          {/* Why Choose Legionnaire Section */}
+          <div className="mt-20">
+            <h2 className="text-4xl font-bold mb-4 text-center">Why Choose Legionnaire?</h2>
+            <p className="text-center text-gray-600 mb-12">See our products in action - engineered for performance in real-world conditions</p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="relative aspect-[3/4] rounded-lg overflow-hidden group">
+                <Image
+                  src="/images/lifestyle/battle-tested.png"
+                  alt="Battle-Tested - F-TAC Evolution in field"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end">
+                  <div className="p-6 text-white w-full">
+                    <h3 className="text-xl font-bold mb-2">Battle-Tested</h3>
+                    <p className="text-xs opacity-90">Engineered and proven in demanding tactical conditions</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative aspect-[3/4] rounded-lg overflow-hidden group">
+                <Image
+                  src="/images/lifestyle/purpose-built.png"
+                  alt="Purpose-Built - F-TAC Evolution with binoculars"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end">
+                  <div className="p-6 text-white w-full">
+                    <h3 className="text-xl font-bold mb-2">Purpose-Built</h3>
+                    <p className="text-xs opacity-90">Designed specifically for tactical and hunting use in all conditions.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative aspect-[3/4] rounded-lg overflow-hidden group">
+                <Image
+                  src="/images/lifestyle/performance.png"
+                  alt="Performance - F-TAC Evolution in mountainous terrain"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end">
+                  <div className="p-6 text-white w-full">
+                    <h3 className="text-xl font-bold mb-2">Performance</h3>
+                    <p className="text-xs opacity-90">Optimized for reliability and durability in extreme conditions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       
 
             {/* Contact Section */}
-
-      {/* Videos Section */}
-        </div>
-      </section>
 
       {/* Contact Section */}
 
