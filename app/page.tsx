@@ -445,7 +445,7 @@ export default function Home() {
                   className="w-full h-full"
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Tactical Gear Showcase</h3>
+              <h3 className="text-xl font-semibold mb-2">Real-World Demo with Jaco</h3>
               <p className="text-gray-600 mb-4">Professional showcase of our premium tactical equipment designed for hunters and outdoor enthusiasts.</p>
               <a
                 href="https://www.youtube.com/watch?v=6AwkBubWHfg"
@@ -471,7 +471,7 @@ export default function Home() {
                   className="w-full h-full"
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Real-World Demo with Jaco</h3>
+              <h3 className="text-xl font-semibold mb-2">Tactical Gear Showcase</h3>
               <p className="text-gray-600 mb-4">See the F-TAC Evolution in action with real-world demonstration of durability and functionality.</p>
               <a
                 href="https://www.youtube.com/watch?v=UIpsJ97OHc0"
